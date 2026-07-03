@@ -1,16 +1,18 @@
 :root {
-  --outer: #b9cef5;
-  --panel: #080d18;
-  --panel-2: #0d1424;
-  --panel-3: #111b31;
-  --text: #f8fbff;
-  --muted: #98a3b7;
-  --line: rgba(255, 255, 255, 0.1);
-  --blue: #0867ff;
-  --blue-2: #1c8cff;
-  --green: #22d487;
+  --outer: #05070b;
+  --panel: #080d14;
+  --panel-2: #0d1621;
+  --panel-3: #132233;
+  --text: #f5f9ff;
+  --muted: #b9c7d8;
+  --line: rgba(188, 225, 255, 0.12);
+  --blue: #16a3ff;
+  --blue-2: #49d6ff;
+  --green: #25d366;
+  --green-2: #7cff6b;
+  --lime: #b9ff42;
   --red: #ef3636;
-  --shadow: 0 28px 58px rgba(9, 14, 27, 0.34);
+  --shadow: 0 28px 58px rgba(0, 0, 0, 0.36);
   --radius: 14px;
 }
 
@@ -27,7 +29,10 @@ body {
   min-height: 100vh;
   font-family: "Inter", Arial, sans-serif;
   color: var(--text);
-  background: var(--outer);
+  background:
+    radial-gradient(circle at 18% 10%, rgba(22, 163, 255, 0.18), transparent 26rem),
+    radial-gradient(circle at 86% 12%, rgba(37, 211, 102, 0.12), transparent 24rem),
+    linear-gradient(180deg, #05070b 0%, #08111a 48%, #05070b 100%);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -47,9 +52,14 @@ a {
   margin: 44px auto;
   overflow: hidden;
   background:
-    radial-gradient(circle at 78% 27%, rgba(8, 103, 255, 0.28), transparent 24%),
-    radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.035), transparent 32%),
-    linear-gradient(180deg, #0a101d 0%, #080d18 58%, #070b14 100%);
+    linear-gradient(rgba(73, 214, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(73, 214, 255, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 78% 22%, rgba(22, 163, 255, 0.2), transparent 24%),
+    radial-gradient(circle at 42% 18%, rgba(37, 211, 102, 0.09), transparent 32%),
+    linear-gradient(180deg, #09111b 0%, #070c13 58%, #05080d 100%);
+  background-size: 46px 46px, 46px 46px, auto, auto, auto;
+  border: 1px solid rgba(188, 225, 255, 0.08);
+  border-radius: 22px;
   box-shadow: var(--shadow);
 }
 
@@ -86,9 +96,9 @@ a {
   display: grid;
   place-items: center;
   overflow: hidden;
-  border: 2px solid rgba(8, 103, 255, 0.7);
+  border: 2px solid rgba(37, 211, 102, 0.72);
   border-radius: 10px;
-  background: #101a2e;
+  background: #0f2018;
   transform: rotate(45deg);
 }
 
@@ -177,9 +187,9 @@ a {
 }
 
 .btn-primary {
-  color: #ffffff;
-  background: linear-gradient(135deg, var(--blue), var(--blue-2));
-  box-shadow: 0 18px 40px rgba(8, 103, 255, 0.35);
+  color: #041009;
+  background: linear-gradient(135deg, var(--green-2), var(--green));
+  box-shadow: 0 18px 40px rgba(37, 211, 102, 0.32);
 }
 
 .btn-outline {
@@ -189,7 +199,7 @@ a {
 }
 
 .btn-small {
-  min-height: 40px;
+  min-height: 44px;
   padding: 0 22px;
   border-radius: 8px;
   font-size: 0.88rem;
@@ -210,9 +220,9 @@ a {
   min-height: 28px;
   padding: 0 15px;
   margin-bottom: 34px;
-  color: var(--blue-2);
-  background: rgba(8, 103, 255, 0.12);
-  border: 1px solid rgba(8, 103, 255, 0.14);
+  color: var(--green-2);
+  background: rgba(37, 211, 102, 0.1);
+  border: 1px solid rgba(37, 211, 102, 0.18);
   border-radius: 999px;
   font-size: 0.78rem;
   font-weight: 900;
@@ -224,8 +234,8 @@ a {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--blue);
-  box-shadow: 0 0 0 6px rgba(8, 103, 255, 0.12);
+  background: var(--green);
+  box-shadow: 0 0 0 6px rgba(37, 211, 102, 0.13);
 }
 
 .status-pill.muted {
@@ -250,7 +260,7 @@ h1 {
 }
 
 h1 em {
-  color: var(--blue);
+  color: var(--green-2);
   font-style: normal;
 }
 
@@ -329,10 +339,12 @@ h3 {
   min-height: 430px;
   margin-top: 28px;
   overflow: hidden;
-  background: linear-gradient(145deg, rgba(17, 27, 49, 0.78), rgba(7, 13, 24, 0.72));
-  border: 1px solid rgba(255, 255, 255, 0.11);
+  background:
+    radial-gradient(circle at 76% 22%, rgba(37, 211, 102, 0.18), transparent 32%),
+    linear-gradient(145deg, rgba(19, 34, 51, 0.84), rgba(5, 10, 16, 0.78));
+  border: 1px solid rgba(188, 225, 255, 0.13);
   border-radius: 18px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 24px 70px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 24px 70px rgba(0, 0, 0, 0.28);
 }
 
 .hero-image-frame::before {
@@ -341,8 +353,8 @@ h3 {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(90deg, rgba(8, 13, 24, 0.12), rgba(8, 103, 255, 0.06)),
-    radial-gradient(circle at 72% 22%, rgba(8, 103, 255, 0.28), transparent 34%);
+    linear-gradient(90deg, rgba(5, 10, 16, 0.04), rgba(37, 211, 102, 0.05)),
+    radial-gradient(circle at 72% 22%, rgba(22, 163, 255, 0.2), transparent 34%);
   pointer-events: none;
 }
 
@@ -387,8 +399,8 @@ h3 {
 
 .product-card:hover {
   transform: translateY(-6px);
-  background: rgba(8, 103, 255, 0.08);
-  border-color: rgba(8, 103, 255, 0.45);
+  background: rgba(37, 211, 102, 0.07);
+  border-color: rgba(37, 211, 102, 0.4);
 }
 
 .product-card p,
@@ -398,8 +410,8 @@ h3 {
 }
 
 .featured {
-  background: rgba(8, 103, 255, 0.14);
-  border-color: rgba(8, 103, 255, 0.34);
+  background: rgba(37, 211, 102, 0.1);
+  border-color: rgba(37, 211, 102, 0.32);
 }
 
 .icon-box {
@@ -408,8 +420,8 @@ h3 {
   display: grid;
   place-items: center;
   margin-bottom: 22px;
-  color: #ffffff;
-  background: linear-gradient(135deg, var(--blue), var(--blue-2));
+  color: #041009;
+  background: linear-gradient(135deg, var(--green-2), var(--green));
   border-radius: 12px;
 }
 
@@ -470,8 +482,8 @@ h3 {
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: var(--blue);
-  box-shadow: 0 0 0 5px rgba(8, 103, 255, 0.12);
+  background: var(--green);
+  box-shadow: 0 0 0 5px rgba(37, 211, 102, 0.12);
 }
 
 .process-grid {
@@ -487,7 +499,7 @@ h3 {
 .process-card span {
   display: block;
   margin-bottom: 30px;
-  color: rgba(8, 103, 255, 0.72);
+  color: rgba(124, 255, 107, 0.78);
   font-size: 3rem;
   font-weight: 900;
   line-height: 1;
@@ -525,8 +537,8 @@ h3 {
 }
 
 .faq-item.is-open {
-  border-color: rgba(8, 103, 255, 0.42);
-  background: rgba(8, 103, 255, 0.075);
+  border-color: rgba(37, 211, 102, 0.38);
+  background: rgba(37, 211, 102, 0.07);
 }
 
 .faq-item.is-open p {
@@ -539,8 +551,8 @@ h3 {
   gap: 34px;
   align-items: center;
   padding: 38px;
-  background: linear-gradient(135deg, rgba(8, 103, 255, 0.2), rgba(255, 255, 255, 0.035));
-  border: 1px solid rgba(8, 103, 255, 0.24);
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.12), rgba(22, 163, 255, 0.08));
+  border: 1px solid rgba(37, 211, 102, 0.22);
   border-radius: 18px;
 }
 
