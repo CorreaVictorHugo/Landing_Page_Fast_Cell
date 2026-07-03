@@ -84,10 +84,18 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  flex: 0 0 auto;
   color: #ffffff;
   font-size: 1.14rem;
   font-weight: 900;
+}
+
+.brand-logo {
+  width: clamp(168px, 18vw, 230px);
+  height: auto;
+  max-height: 46px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 22px rgba(255, 0, 0, 0.16));
 }
 
 .brand-icon {
@@ -692,6 +700,11 @@ h3 {
   .nav {
     min-height: 74px;
     padding: 0 22px;
+  }
+
+  .brand-logo {
+    width: 168px;
+    max-height: 40px;
   }
 
   .nav-panel {
