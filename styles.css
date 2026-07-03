@@ -85,17 +85,22 @@ a {
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
+  padding: 8px 12px;
   color: #ffffff;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 999px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24), 0 0 0 1px rgba(37, 211, 102, 0.14);
   font-size: 1.14rem;
   font-weight: 900;
 }
 
 .brand-logo {
-  width: clamp(168px, 18vw, 230px);
+  width: clamp(154px, 16vw, 210px);
   height: auto;
-  max-height: 46px;
+  max-height: 38px;
   object-fit: contain;
-  filter: drop-shadow(0 10px 22px rgba(37, 211, 102, 0.22));
+  filter: none;
 }
 
 .brand-icon {
@@ -703,8 +708,8 @@ h3 {
   }
 
   .brand-logo {
-    width: 168px;
-    max-height: 40px;
+    width: 150px;
+    max-height: 34px;
   }
 
   .nav-panel {
