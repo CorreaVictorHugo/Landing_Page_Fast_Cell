@@ -1,0 +1,215 @@
+MANUAL: COMO SUBIR UM PROJETO PARA O GITHUB EM UMA NOVA BRANCH
+
+Este guia usa como exemplo o projeto Fast Cell, mas serve para qualquer projeto simples.
+
+
+1. ABRIR A PASTA DO PROJETO
+
+No terminal, entre na pasta do projeto:
+
+cd "C:\Users\Victor Hugo\Documents\Web_Site_Fast_Cell"
+
+
+2. VERIFICAR SE JA EXISTE GIT NA PASTA
+
+Rode:
+
+git status
+
+Se aparecer uma mensagem com branch, arquivos modificados ou "working tree clean",
+o Git ja esta iniciado.
+
+Se aparecer erro dizendo que nao e um repositorio Git, rode:
+
+git init
+
+
+3. VERIFICAR AS BRANCHES EXISTENTES
+
+Rode:
+
+git branch --all
+
+Esse comando mostra as branches locais e remotas.
+
+
+4. CRIAR UMA NOVA BRANCH
+
+Use um nome claro para a branch. Exemplo:
+
+git switch -c codex/landing-page-v1-2
+
+Outra opcao de nome:
+
+git switch -c minha-nova-versao
+
+Importante:
+- use nomes sem espaco;
+- prefira letras minusculas;
+- use hifen para separar palavras.
+
+
+5. VERIFICAR OS ARQUIVOS ALTERADOS
+
+Rode:
+
+git status --short
+
+Esse comando mostra os arquivos novos, alterados ou removidos.
+
+Exemplos:
+- ?? arquivo.html  = arquivo novo ainda nao rastreado
+- M arquivo.css    = arquivo modificado
+- D arquivo.js     = arquivo removido
+
+
+6. ADICIONAR OS ARQUIVOS PARA O COMMIT
+
+Para adicionar tudo:
+
+git add .
+
+Ou, para adicionar arquivos e pastas especificos:
+
+git add index.html css js README.md
+
+
+7. CRIAR O COMMIT
+
+Rode:
+
+git commit -m "Add nova versao da landing page"
+
+Use uma mensagem curta dizendo o que mudou.
+
+Exemplos:
+
+git commit -m "Add Fast Cell landing page v1.2"
+git commit -m "Update mobile catalog layout"
+git commit -m "Fix WhatsApp CTA links"
+
+
+8. CONFIGURAR O REPOSITORIO REMOTO DO GITHUB
+
+Primeiro veja se ja existe remoto configurado:
+
+git remote -v
+
+Se nao aparecer nada, adicione o repositorio:
+
+git remote add origin https://github.com/CorreaVictorHugo/Landing_Page_Fast_Cell.git
+
+Se o remoto ja existir, nao precisa adicionar de novo.
+
+
+9. BUSCAR AS BRANCHES DO GITHUB
+
+Rode:
+
+git fetch origin
+
+Isso atualiza a lista de branches remotas no seu computador.
+
+
+10. SUBIR A BRANCH PARA O GITHUB
+
+Rode:
+
+git push -u origin nome-da-sua-branch
+
+Exemplo usado no projeto:
+
+git push -u origin codex/landing-page-v1-2
+
+Depois disso, a branch fica criada no GitHub.
+
+
+11. ABRIR UM PULL REQUEST
+
+Depois do push, o GitHub geralmente mostra um link para criar o Pull Request.
+
+Tambem da para abrir direto no navegador:
+
+https://github.com/CorreaVictorHugo/Landing_Page_Fast_Cell/pulls
+
+No Pull Request, escolha:
+
+base: main
+compare: sua-branch
+
+Depois clique em "Create pull request".
+
+
+12. COMANDOS MAIS USADOS NO DIA A DIA
+
+Ver status:
+
+git status
+
+Ver status resumido:
+
+git status --short
+
+Ver branch atual:
+
+git branch --show-current
+
+Listar branches:
+
+git branch --all
+
+Criar e entrar em uma branch nova:
+
+git switch -c nome-da-branch
+
+Entrar em uma branch existente:
+
+git switch nome-da-branch
+
+Adicionar arquivos:
+
+git add .
+
+Criar commit:
+
+git commit -m "Mensagem do commit"
+
+Subir branch:
+
+git push -u origin nome-da-branch
+
+Atualizar informacoes do GitHub:
+
+git fetch origin
+
+
+13. FLUXO COMPLETO RESUMIDO
+
+cd "C:\Users\Victor Hugo\Documents\Web_Site_Fast_Cell"
+git status
+git switch -c nome-da-branch
+git add .
+git commit -m "Mensagem explicando a alteracao"
+git remote -v
+git push -u origin nome-da-branch
+
+
+14. EXEMPLO REAL DO PROJETO FAST CELL
+
+cd "C:\Users\Victor Hugo\Documents\Web_Site_Fast_Cell"
+git switch -c codex/landing-page-v1-2
+git add README.md css docs index.html js tokens
+git commit -m "Add Fast Cell landing page v1.2"
+git remote add origin https://github.com/CorreaVictorHugo/Landing_Page_Fast_Cell.git
+git fetch origin
+git push -u origin codex/landing-page-v1-2
+
+
+15. OBSERVACOES IMPORTANTES
+
+- Nao use git reset --hard se tiver duvida, pois pode apagar alteracoes locais.
+- Antes de trocar de branch, rode git status para ver se ha arquivos pendentes.
+- Se o repositorio remoto ja estiver configurado, nao rode git remote add origin de novo.
+- Se o push pedir login, use sua conta do GitHub ou token configurado.
+- Para publicar no Netlify, voce pode conectar o repositorio do GitHub e escolher a branch desejada.
+
