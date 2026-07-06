@@ -1,0 +1,111 @@
+{
+  "name": "Fast Cell Design System",
+  "direction": "Dark Precision Commerce",
+  "version": "1.0.0",
+  "brand": "Fast Cell",
+  "description": "Mini design system mobile-first para landing pages técnicas, escuras, premium e comerciais para assistência e peças de celulares.",
+  "colors": {
+    "background": {
+      "main": "#070909",
+      "section": "#0D1010",
+      "card": "#141818",
+      "elevated": "#1B2020",
+      "soft": "#101313"
+    },
+    "text": {
+      "main": "#F4F5F2",
+      "muted": "#A5ABA6",
+      "low": "#646B66"
+    },
+    "brand": {
+      "primary": "#B7F13B",
+      "dark": "#6EA51E",
+      "soft": "rgba(183, 241, 59, 0.12)",
+      "glow": "rgba(183, 241, 59, 0.22)"
+    },
+    "border": {
+      "default": "rgba(255, 255, 255, 0.07)",
+      "strong": "rgba(255, 255, 255, 0.14)"
+    }
+  },
+  "typography": {
+    "fontMain": "Inter, system-ui, sans-serif",
+    "fontDisplay": "Space Grotesk, system-ui, sans-serif",
+    "scale": {
+      "xs": "0.72rem",
+      "sm": "0.875rem",
+      "base": "1rem",
+      "lg": "1.25rem",
+      "xl": "1.75rem",
+      "sectionTitle": "clamp(2rem, 6vw, 4.5rem)",
+      "hero": "clamp(3rem, 12vw, 6.8rem)"
+    },
+    "heading": {
+      "weight": 500,
+      "lineHeight": 0.98,
+      "letterSpacing": "-0.06em"
+    },
+    "body": {
+      "lineHeight": 1.7,
+      "weight": 400
+    }
+  },
+  "spacing": {
+    "1": "0.25rem",
+    "2": "0.5rem",
+    "3": "0.75rem",
+    "4": "1rem",
+    "5": "1.5rem",
+    "6": "2rem",
+    "7": "3rem",
+    "8": "5rem",
+    "9": "7rem",
+    "10": "10rem"
+  },
+  "layout": {
+    "container": "1180px",
+    "mobilePadding": "1.25rem",
+    "tabletPadding": "2rem",
+    "desktopPadding": "3rem",
+    "desktopGrid": 12,
+    "mobileGrid": 1
+  },
+  "radius": {
+    "xs": "2px",
+    "sm": "6px",
+    "md": "12px",
+    "lg": "20px"
+  },
+  "shadow": {
+    "soft": "0 24px 80px rgba(0, 0, 0, 0.38)",
+    "deep": "0 44px 140px rgba(0, 0, 0, 0.58)"
+  },
+  "components": {
+    "buttonPrimary": {
+      "height": "46px",
+      "background": "#B7F13B",
+      "color": "#101308",
+      "radius": "2px"
+    },
+    "buttonSecondary": {
+      "height": "46px",
+      "background": "linear-gradient(180deg, #1B2020, #0E1010)",
+      "color": "#F4F5F2",
+      "border": "1px solid rgba(255, 255, 255, 0.07)"
+    },
+    "card": {
+      "background": "linear-gradient(180deg, #141818, #0B0E0E)",
+      "border": "1px solid rgba(255, 255, 255, 0.07)",
+      "padding": "26px",
+      "radius": "6px"
+    }
+  },
+  "motion": {
+    "reveal": {
+      "initial": "opacity: 0; transform: translateY(22px);",
+      "visible": "opacity: 1; transform: translateY(0);",
+      "transition": "opacity 0.7s ease, transform 0.7s ease"
+    },
+    "buttonHover": "translateY(-2px)"
+  }
+}
