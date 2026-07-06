@@ -887,3 +887,134 @@ summary:focus-visible {
     text-align: center;
   }
 }
+
+/* =========================================================
+   FAST CELL — CONTRASTE E LEGIBILIDADE v1.2
+   Reforca leitura em fundos escuros sem mudar a identidade visual.
+   ========================================================= */
+
+:root {
+  --text-muted: #D6DCD7;
+  --text-low: #B9C2BC;
+  --line: rgba(255, 255, 255, 0.13);
+  --line-strong: rgba(255, 255, 255, 0.24);
+}
+
+body {
+  color: #FAFCF8;
+}
+
+.site-header {
+  background: linear-gradient(180deg, rgba(7, 9, 9, 0.98), rgba(7, 9, 9, 0.82));
+}
+
+.site-header.is-scrolled {
+  background: rgba(7, 9, 9, 0.98);
+}
+
+.site-nav a,
+.header-cta,
+.footer-grid a:not(.logo) {
+  color: #E4E9E4;
+}
+
+.hero {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.08) 58%),
+    radial-gradient(circle at 80% 26%, rgba(183,241,59,.18), transparent 28%),
+    radial-gradient(circle at 12% 82%, rgba(255,255,255,0.07), transparent 30%),
+    linear-gradient(180deg, #141818 0%, #070909 100%);
+}
+
+.hero-copy h1,
+.section-heading h2,
+.technical-copy h2,
+.benefits-copy h2,
+.faq-intro h2,
+.final-cta-box h2 {
+  color: #FFFFFF;
+  font-weight: 700;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.34);
+}
+
+.hero-copy p,
+.section-heading .text-muted,
+.technical-copy p,
+.final-cta-box p,
+.product-card p,
+.process-step p,
+.benefit-item p,
+details p,
+.footer-grid p {
+  color: #DCE3DD;
+}
+
+.eyebrow {
+  color: #D8FF78;
+  font-weight: 800;
+}
+
+.hero-meta span,
+.trust-grid span,
+.availability-card span {
+  color: #D8DED9;
+}
+
+.hero-meta span {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.card,
+.process-step,
+details {
+  background: linear-gradient(180deg, #1D2424, #101414);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.product-art {
+  background: rgba(255, 255, 255, 0.055);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.product-card h3,
+.process-step h3,
+.benefit-item h3,
+summary,
+.stock-row strong,
+.footer-grid h4 {
+  color: #FFFFFF;
+  font-weight: 800;
+}
+
+.spec-list div {
+  color: #E3E8E4;
+}
+
+.stock-row {
+  background: rgba(255, 255, 255, 0.055);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.trust-strip,
+.trust-grid div {
+  background: #101414;
+}
+
+.btn-secondary {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.22);
+  background: linear-gradient(180deg, #263030, #141818);
+}
+
+.final-cta-box {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.04)),
+    radial-gradient(circle at 80% 20%, rgba(183,241,59,.18), transparent 30%),
+    linear-gradient(180deg, #1C2323, #0A0D0D);
+}
+
+.floating-whatsapp,
+.btn-primary {
+  box-shadow: 0 18px 60px rgba(183, 241, 59, 0.28);
+}
