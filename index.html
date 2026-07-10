@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
   <div class="page-shell">
     <header class="site-header" data-header>
       <nav class="nav" aria-label="Navegação principal">
@@ -38,6 +39,7 @@
 
     <main>
       <section class="hero" id="inicio">
+        <div class="hero-data-flow" aria-hidden="true"></div>
         <div class="hero-content reveal">
           <span class="status-pill"><span></span> Estoque para técnicos e assistências</span>
           <h1>Peças de celular com <em>qualidade</em> e atendimento rápido.</h1>
@@ -209,6 +211,10 @@
       <small>© 2026 Fast Cell. Todos os direitos reservados.</small>
     </footer>
   </div>
+
+  <button class="back-to-top" type="button" data-back-to-top aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5 5 12l1.4 1.4L11 8.8V20h2V8.8l4.6 4.6L19 12l-7-7Z"/></svg>
+  </button>
 
   <a class="whatsapp-float" href="https://wa.me/5521996929998" target="_blank" rel="noopener" aria-label="Chamar a Fast Cell no WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9 9 0 0 0-7.7 13.7L3 22l6.4-1.3A9 9 0 1 0 12 2Zm0 2a7 7 0 0 1 0 14 7.1 7.1 0 0 1-2.3-.4l-.3-.1-3.8.8.8-3.7-.2-.3A7 7 0 0 1 12 4Zm-3 4.5c-.2 0-.5.1-.7.4-.2.3-.8.8-.8 2 0 1.1.8 2.2.9 2.4.1.1 1.6 2.6 4 3.5 2 .8 2.4.6 2.9.6.4-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.3-.2-.7-.4l-1.7-.8c-.3-.1-.5-.1-.7.2l-.6.8c-.2.3-.4.3-.7.1-.4-.2-1.4-.5-2.6-1.6-1-1-1.6-2.1-1.8-2.4-.2-.4 0-.5.1-.7l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.6-.7-.6H9Z"/></svg>
