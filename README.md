@@ -18,6 +18,8 @@ O projeto foi criado com foco em apresentação comercial, conversão via WhatsA
 
 ![Seção de contato da Fast Cell](assets/page_3.png)
 
+https://fastcell.netlify.app/
+
 ## Objetivo do projeto
 
 Apresentar a Fast Cell como uma loja confiável para técnicos, assistências e clientes que precisam de peças de celular com agilidade, variedade e bom atendimento.
