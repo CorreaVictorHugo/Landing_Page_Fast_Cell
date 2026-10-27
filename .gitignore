@@ -1,0 +1,15 @@
+# Configurações locais e possíveis credenciais
+.env
+.env.*
+!.env.example
+
+# Dependências, logs e arquivos temporários
+node_modules/
+*.log
+.impeccable/
+
+# Editor e sistema operacional
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

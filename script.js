@@ -1,10 +1,12 @@
+document.documentElement.classList.add("js");
+
 const header = document.querySelector("[data-header]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const navPanel = document.querySelector("[data-nav-panel]");
 const revealItems = document.querySelectorAll(".reveal");
-const faqItems = document.querySelectorAll(".faq-item");
 const scrollProgress = document.querySelector("[data-scroll-progress]");
 const backToTop = document.querySelector("[data-back-to-top]");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const navLinks = document.querySelectorAll('.nav-panel a[href^="#"]');
 const sections = Array.from(navLinks)
   .map((link) => document.querySelector(link.getAttribute("href")))
@@ -32,50 +34,51 @@ updateScrollUi();
 window.addEventListener("scroll", updateScrollUi, { passive: true });
 window.addEventListener("resize", updateScrollUi);
 
+const setMenuOpen = (isOpen) => {
+  menuToggle?.classList.toggle("is-open", isOpen);
+  navPanel?.classList.toggle("is-open", isOpen);
+  menuToggle?.setAttribute("aria-expanded", String(isOpen));
+  menuToggle?.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+};
+
 menuToggle?.addEventListener("click", () => {
-  const isOpen = menuToggle.classList.toggle("is-open");
-  navPanel.classList.toggle("is-open", isOpen);
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
 });
 
 navPanel?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
-    menuToggle?.classList.remove("is-open");
-    navPanel.classList.remove("is-open");
-    menuToggle?.setAttribute("aria-expanded", "false");
+    setMenuOpen(false);
   });
 });
 
-backToTop?.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && menuToggle?.getAttribute("aria-expanded") === "true") {
+    setMenuOpen(false);
+    menuToggle.focus();
+  }
 });
 
-const observer = new IntersectionObserver(
-  (entries) => {
+document.addEventListener("click", (event) => {
+  if (menuToggle?.getAttribute("aria-expanded") === "true" &&
+      !menuToggle.contains(event.target) && !navPanel.contains(event.target)) {
+    setMenuOpen(false);
+  }
+});
+
+backToTop?.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: reduceMotion ? "instant" : "smooth" });
+});
+
+if ("IntersectionObserver" in window && !reduceMotion) {
+  document.documentElement.classList.add("js-motion");
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("is-visible");
         observer.unobserve(entry.target);
       }
     });
-  },
-  { threshold: 0.16 }
-);
+  }, { threshold: 0.08 });
 
-revealItems.forEach((item) => observer.observe(item));
-
-faqItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    const willOpen = !item.classList.contains("is-open");
-
-    faqItems.forEach((faqItem) => {
-      faqItem.classList.remove("is-open");
-      faqItem.setAttribute("aria-expanded", "false");
-    });
-
-    if (willOpen) {
-      item.classList.add("is-open");
-      item.setAttribute("aria-expanded", "true");
-    }
-  });
-});
+  revealItems.forEach((item) => observer.observe(item));
+}

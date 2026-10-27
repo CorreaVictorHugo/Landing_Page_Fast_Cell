@@ -4,13 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Fast Cell: peças e acessórios para celulares com qualidade, rapidez e atendimento ágil pelo WhatsApp." />
+  <meta name="theme-color" content="#080d14" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fast Cell | Peças e acessórios para celulares" />
+  <meta property="og:description" content="Consulte peças, acessórios e compatibilidade com a Fast Cell pelo WhatsApp." />
+  <meta property="og:image" content="https://fastcell.netlify.app/assets/page_1.png" />
   <title>Fast Cell | Peças e Acessórios para Celulares</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fast-cell-hero-comic.webp" as="image" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
   <div class="page-shell">
     <header class="site-header" data-header>
@@ -19,13 +26,13 @@
           <img class="brand-logo" src="assets/logo-fast-cell-header-tech.png" alt="Fast Cell" />
         </a>
 
-        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-toggle>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false" data-menu-toggle>
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        <div class="nav-panel" data-nav-panel>
+        <div class="nav-panel" id="menu-principal" data-nav-panel>
           <a href="#inicio">Início</a>
           <a href="#produtos">Produtos</a>
           <a href="#beneficios">Benefícios</a>
@@ -37,7 +44,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="conteudo" tabindex="-1">
       <section class="hero" id="inicio">
         <div class="hero-data-flow" aria-hidden="true"></div>
         <div class="hero-content reveal">
@@ -53,7 +60,7 @@
 
         <div class="hero-visual reveal delay-1" aria-label="Peças e acessórios Fast Cell">
           <div class="hero-image-frame">
-            <img src="assets/fast-cell-hero-comic.webp" alt="Ilustração em estilo quadrinho com smartphones, peças, telas, baterias, conectores e carregadores para manutenção" />
+            <img src="assets/fast-cell-hero-comic.webp" alt="Ilustração em estilo quadrinho com smartphones, peças, telas, baterias, conectores e carregadores para manutenção" fetchpriority="high" decoding="async" />
           </div>
         </div>
       </section>
@@ -106,7 +113,7 @@
 
       <section class="section split-section" id="beneficios">
         <div class="photo-panel reveal">
-          <img src="assets/fast-cell-logo-photo.jpg" alt="Logo da loja Fast Cell" />
+          <img src="assets/fast-cell-logo-photo.jpg" alt="Logo da loja Fast Cell" loading="lazy" decoding="async" />
         </div>
         <div class="copy-panel reveal">
           <span class="status-pill muted"><span></span> Por que escolher</span>
@@ -158,18 +165,18 @@
             <h2>Antes de chamar, veja como comprar.</h2>
           </div>
           <div class="faq-list reveal">
-            <button class="faq-item is-open" type="button" aria-expanded="true">
-              <span>Como consultar uma peça específica?</span>
+            <details class="faq-item" open>
+              <summary>Como consultar uma peça específica?</summary>
               <p>Envie o modelo do aparelho e a peça desejada pelo WhatsApp. A equipe confirma disponibilidade, valor e compatibilidade.</p>
-            </button>
-            <button class="faq-item" type="button" aria-expanded="false">
-              <span>Vocês atendem técnicos e assistências?</span>
+            </details>
+            <details class="faq-item">
+              <summary>Vocês atendem técnicos e assistências?</summary>
               <p>Sim. O atendimento é pensado para técnicos, assistências e clientes que precisam de reposição com agilidade.</p>
-            </button>
-            <button class="faq-item" type="button" aria-expanded="false">
-              <span>Quais produtos encontro?</span>
+            </details>
+            <details class="faq-item">
+              <summary>Quais produtos encontro?</summary>
               <p>Telas, baterias, conectores, câmeras, carcaças, películas, cabos, carregadores e itens de reposição.</p>
-            </button>
+            </details>
           </div>
         </div>
       </section>

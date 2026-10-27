@@ -1,103 +1,52 @@
-# Fast Cell | Landing Page
+# Fast Cell — landing page comercial
 
-Landing page moderna e responsiva desenvolvida para a **Fast Cell**, loja especializada em peças, componentes e acessórios para celulares.
+Landing page responsiva para apresentar peças e acessórios de celular e levar o visitante ao atendimento da Fast Cell no WhatsApp. Projeto estático, feito com HTML, CSS e JavaScript, sem dependências de produção.
 
-O projeto foi criado com foco em apresentação comercial, conversão via WhatsApp e uma experiência visual alinhada ao segmento de tecnologia e manutenção de smartphones.
+**[Ver a página publicada](https://fastcell.netlify.app/)** · **[Ver o código](https://github.com/CorreaVictorHugo/Landing_Page_Fast_Cell)**
 
-## Preview
+## O projeto
 
-### Hero e chamada principal
+O fluxo foi pensado para técnicos, assistências e clientes que precisam consultar uma peça: entender o catálogo, conferir como funciona a compra e iniciar uma conversa. A página reúne categorias de produtos, benefícios, perguntas frequentes e chamadas para contato.
 
-![Hero da landing page Fast Cell](assets/page_1.png)
+### Prévia
 
-### Catálogo de produtos
+| Abertura | Catálogo | Contato |
+| --- | --- | --- |
+| ![Abertura da página Fast Cell](assets/page_1.png) | ![Categorias de produtos](assets/page_2.png) | ![Perguntas frequentes e contato](assets/page_3.png) |
 
-![Seção de catálogo da Fast Cell](assets/page_2.png)
+## Decisões de implementação
 
-### Dúvidas, contato e rodapé
+- **Contato direto:** as chamadas principais abrem o WhatsApp da loja, sem formulário intermediário.
+- **Layout responsivo:** navegação e grades se adaptam a telas menores.
+- **Acessibilidade:** link para pular ao conteúdo, foco visível, menu com estado anunciado e perguntas frequentes com `details`/`summary` nativos.
+- **Resiliência:** conteúdo e perguntas frequentes continuam acessíveis sem JavaScript; animações respeitam a preferência por movimento reduzido.
+- **Desempenho:** imagem principal em WebP com prioridade de carregamento e imagem secundária carregada sob demanda.
 
-![Seção de contato da Fast Cell](assets/page_3.png)
+## Executar localmente
 
-https://fastcell.netlify.app/
-
-## Objetivo do projeto
-
-Apresentar a Fast Cell como uma loja confiável para técnicos, assistências e clientes que precisam de peças de celular com agilidade, variedade e bom atendimento.
-
-A landing page prioriza:
-
-- Comunicação direta e comercial.
-- Botões de contato via WhatsApp.
-- Visual dark/tech com destaque em verde.
-- Layout responsivo para celulares.
-- Cards organizados para categorias de produtos.
-- Seções de benefícios, dúvidas e contato rápido.
-
-## Tecnologias utilizadas
-
-- HTML5
-- CSS3
-- JavaScript
-- Layout responsivo/mobile-first
-- Git e GitHub
-- Deploy via Netlify
-
-## Principais seções
-
-- Header com navegação e CTA para WhatsApp.
-- Hero section com imagem principal e chamada comercial.
-- Catálogo com categorias de peças.
-- Benefícios para técnicos e assistências.
-- Área sobre a empresa.
-- Dúvidas frequentes.
-- Chamada para contato rápido.
-- Rodapé com links e redes sociais.
-
-## Funcionalidades
-
-- Menu responsivo para dispositivos móveis.
-- Animações suaves ao rolar a página.
-- Botão flutuante de WhatsApp.
-- CTAs destacados para conversão.
-- Layout adaptado para desktop e mobile.
-
-## Como executar localmente
-
-Clone o repositório e abra a pasta do projeto:
+Clone o repositório e sirva a pasta com qualquer servidor HTTP estático:
 
 ```bash
 git clone https://github.com/CorreaVictorHugo/Landing_Page_Fast_Cell.git
 cd Landing_Page_Fast_Cell
-```
-
-Como o projeto é estático, é possível abrir o arquivo `index.html` diretamente no navegador.
-
-Também é possível rodar com um servidor local:
-
-```bash
 python -m http.server 4187
 ```
 
-Depois acesse:
+Abra [http://localhost:4187](http://localhost:4187). Também é possível abrir `index.html` diretamente no navegador.
+
+## Estrutura
 
 ```text
-http://localhost:4187
+├── index.html       # Conteúdo e estrutura da página
+├── styles.css       # Estilos e pontos de adaptação
+├── script.js        # Menu, navegação e animações opcionais
+└── assets/          # Imagens usadas no site e nesta documentação
 ```
 
-## Deploy
+## Publicação e personalização
 
-O projeto pode ser publicado em plataformas como:
+Não há etapa de build. Em uma hospedagem estática como Netlify, use `main` como branch e `.` como diretório de publicação. Os links comerciais da Fast Cell estão em `index.html`; atualize-os antes de adaptar o projeto para outra empresa. Textos sobre estoque, preços e atendimento devem ser confirmados com o cliente antes da publicação.
 
-- Netlify
-- Vercel
-- GitHub Pages
+## Autoria
 
-Configuração recomendada para Netlify:
-
-- Build command: vazio
-- Publish directory: `.`
-- Branch de produção: `main`
-
-## Autor
-
-Desenvolvido por **Victor Hugo** como projeto de landing page comercial para portfólio e trabalhos freelancer.
+Desenvolvido por **Victor Hugo** como projeto de portfólio de landing page comercial.
